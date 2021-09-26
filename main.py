@@ -11,10 +11,10 @@ comodo = Comodo(
 
 #Impressão dos resultados
 print('A área das paredes é de',
-      calc.calcular_area_paredes(comodo.altura, comodo.largura, comodo.profundidade),
+      calc.calcular_area_paredes(comodo),
       'm².')
 print('A área do teto é de',
-      calc.calcular_area_teto(comodo.largura, comodo.profundidade),
+      calc.calcular_area_teto(comodo),
       'm².')
 print('A quantidade de tinta necessária é de',
       calc.calcular_litragem_tinta(),

@@ -1,10 +1,38 @@
 class Comodo:
 
-    altura: float
-    largura: float
-    profundidade: float
+    __altura: float
+    __largura: float
+    __profundidade: float
 
     def __init__(self, largura, profundidade):
-        self.largura = float(largura)
-        self.profundidade = float(profundidade)
-        self.altura = 2.9
+        self.largura = largura
+        self.profundidade = profundidade
+        self.__altura = 2.9
+
+    @property
+    def altura(self):
+        return self.__altura
+
+    @property
+    def largura(self):
+        return self.__largura
+
+    @property
+    def profundidade(self):
+        return self.__profundidade
+
+    @largura.setter
+    def largura(self, largura):
+        try:
+            self.__largura = float(largura)
+        except Exception:
+            print('O valor informado da largura é inválido.')
+            exit()
+
+    @profundidade.setter
+    def profundidade(self, profundidade):
+        try:
+            self.__profundidade = float(profundidade)
+        except Exception:
+            print('O valor informado da profundidade é inválido.')
+            exit()
